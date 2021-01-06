@@ -19,7 +19,7 @@ The Mertens function *M*(*n*) takes one parameter − **a positive integer *n***
 
 The Mertens conjecture is a disproven mathematical conjecture regarding the Mertens function *M*(*n*). Its truth was known to imply **the truth of the Riemann hypothesis.**
 
-The conjecture states that **the Mertens function *M*(*n*) is bounded by ±√n**, i.e. the graph of *M*(*n*) never "escapes" the right-facing U-shaped graph of the square root function. This statement was disproven in a 1985 paper by Andrew Odlyzko and Herman te Riele ([the full disproof in PDF format](http://www.dtc.umn.edu/~odlyzko/doc/arch/mertens.disproof.pdf)). The exact value of *n* at which this statement becomes false is not known; the first counterexample appears above ***n* = 10^16^** and below ***n* = 10^6.91×10^^\^39^**.
+The conjecture states that **the Mertens function *M*(*n*) is bounded by ±√n**, i.e. the graph of *M*(*n*) never "escapes" the right-facing U-shaped graph of the square root function. This statement was disproven in a 1985 paper by Andrew Odlyzko and Herman te Riele ([the full disproof in PDF format](http://www.dtc.umn.edu/~odlyzko/doc/arch/mertens.disproof.pdf)). The exact value of *n* at which this statement becomes false is not known; the first counterexample appears above ***n* = 10^16** and below ***n* = 10^(6.91×j)** (where **j** = **10^39**), which are terribly imprecise upper and lower bounds.
 
 ## The Code
 
