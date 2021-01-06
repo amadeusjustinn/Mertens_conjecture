@@ -17,11 +17,12 @@ The Mertens function *M*(*n*) takes one parameter − **a positive integer *n***
 
 ## The Conjecture
 
-The Mertens conjecture is a disproven mathematical conjecture regarding the Mertens function *M*(*n*). Its truth was known to imply **the truth of the Riemann hypothesis.**
+The Mertens conjecture is a disproven mathematical conjecture regarding the Mertens function *M*(*n*). Its truth was known to imply **the truth of the Riemann hypothesis** ([a good explanation by Jørgen Veisdal](https://medium.com/cantors-paradise/the-riemann-hypothesis-explained-fa01c1f75d3f)).
 
 The conjecture states that **the Mertens function *M*(*n*) is bounded by ±√n**, i.e. the graph of *M*(*n*) never "escapes" the right-facing U-shaped graph of the square root function. This statement was disproven in a 1985 paper by Andrew Odlyzko and Herman te Riele ([the full disproof in PDF format](http://www.dtc.umn.edu/~odlyzko/doc/arch/mertens.disproof.pdf)). The exact value of *n* at which this statement becomes false is not known; the first counterexample appears above ***n* = 10^16** and below ***n* = 10^(6.91×j)** (where **j** = **10^39**), which are terribly imprecise upper and lower bounds.
 
 ## The Code
 
 To run the code, simply run `python3 mertensplot.py`. The terminal will prompt the user to type the desired upper bound of the Mertens function, which is included. After said bound is entered, a graph will be generated with the use of the Python library `matplotlib`. The graph includes the Mertens function values for each integer from 1 up to and including the aforementioned upper bound, as well as the positive and negative square root values for real numbers from 0 up to and including the aforementioned upper bound.
-At some number that is probably too large for personal computers to handle, the Mertens function will "break away" from the square root function. The main takeaway is that just because a pattern (or in this case, a mathematical conjecture) has a large amount of computational evidence in its favour, does not mean it is guaranteed to be true for all numbers up to infinity.
+
+At some number that is probably too large for personal computers to handle (see imprecise bounds in description , the Mertens function will "break away" from the square root function. The main takeaway is that just because a pattern (or in this case, a mathematical conjecture) has a large amount of computational evidence in its favour, does not mean it is guaranteed to be true for all numbers up to infinity.
