@@ -4,11 +4,11 @@ A graph visualisation of the Mertens function to illustrate the concept of the M
 ## Möbius Function
 
 The Möbius function *μ*(*n*) takes one parameter − a positive integer *n* − and returns one of three values:
-- ***0*** if *n* has a **squared prime factor** (e.g. 18 has a factor of 9, which is 3^2^, and 3 is a prime, thus *μ*(9) = 0.),
+- ***0*** if *n* has a **squared prime factor** (e.g. 18 has a factor of 9, which is 3^2, and 3 is a prime, thus *μ*(9) = 0.),
 - ***1*** if *n* has an **even number of prime factors**, **none** of which  **are "repeated"** (e.g. 210 has *four* prime factors − 2, 3, 5 and 7 − and *4* is an even number. None of 2, 3, 5 and 7 are "repeated" factors, i.e. none of 4, 9, 25 and 49 are factors of 210, thus *μ*(210) = 1.) or
 - ***-1*** if *n* has an **odd number of prime factors**, **none** of which  **are "repeated"** (e.g. 30 has *three* prime factors − 2, 3 and 5 − and *3* is an odd number. None of 2, 3 and 5 are "repeated" factors, i.e. none of 4, 9 and 25 are factors of 30, thus *μ*(30) = -1.).
 
-**NOTE:** If any prime factor is "repeated", the function would return 0 (e.g. 24 = 2^3^ × 3 = **2^2^** × 2 × 3, 27 = 3^3^ = **3^2^** × 3). Also, -1 would be returned for any prime number since any prime number only has one factor (excluding 1), which is the prime number itself, and 1 is an odd number.
+**NOTE:** If any prime factor is "repeated", the function would return 0 (e.g. 24 = 2^3 × 3 = **2^2** × 2 × 3, 27 = 3^3 = **3^2** × 3). Also, -1 would be returned for any prime number since any prime number only has one factor (excluding 1), which is the prime number itself, and 1 is an odd number.
 
 ## Mertens Function
 
