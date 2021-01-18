@@ -16,19 +16,25 @@ def main() -> None:
                          for k in range(n)])  # Positive square root values
     ysqrtneg = np.array([-m for m in ysqrtpos])  # Negative square root values
 
-    maxmertens = maxindex = minmertens = minindex = 1
+    maxmertens = minmertens = 1
+    maxindex = minindex = []
     for p in range(1, n):
         # Assign Mertens function values for p
         ymertens[p] = mertens.mobius(p + 1) + ymertens[p - 1]
         # Set max and min values
-        if ymertens[p] > maxmertens:
-            maxmertens = ymertens[p]
-            maxindex = p + 1
-        if ymertens[p] < minmertens:
-            minmertens = ymertens[p]
-            minindex = p + 1
-    maxstring = "Maximum: " + str(maxmertens) + " at x = " + str(maxindex)
-    minstring = "minimum: " + str(minmertens) + " at x = " + str(minindex)
+        if ymertens[p] >= maxmertens:
+            if ymertens[p] > maxmertens:
+                maxmertens = ymertens[p]
+                maxindex = []
+            maxindex.append(str(p + 1))
+        if ymertens[p] <= minmertens:
+            if ymertens[p] < minmertens:
+                minmertens = ymertens[p]
+                minindex = []
+            minindex.append(str(p + 1))
+    max_string = "Max: " + str(maxmertens) + " at x = " + ", ".join(maxindex)
+    min_string = "Min: " + str(minmertens) + " at x = " + ", ".join(minindex)
+    final_string = max_string + "\n" + min_string
 
     plt.title("Disproven Mertens conjecture\nMertens function and square roots for positive integers <= " + str(n), fontsize=10)
     plt.xlabel("x")
@@ -36,9 +42,8 @@ def main() -> None:
 
     plt.plot(xarr, ymertens, "#FF2F00", label="Mertens(x)")
 
-    xarr3 = np.linspace(0, n, n * 50)
-
     # Smoothen square root graph using scipy
+    xarr3 = np.linspace(0, n, n * 50)
     bsp1 = ipl.make_interp_spline(xarr2, ysqrtpos)
     ysqrtpos2 = bsp1(xarr3)
     plt.plot(xarr3, ysqrtpos2, "#0066FF", label="sqrt(x)")
@@ -47,10 +52,14 @@ def main() -> None:
     ysqrtneg2 = bsp2(xarr3)
     plt.plot(xarr3, ysqrtneg2, "#0066FF")
 
+    # Place grid, legend and text on graph
     plt.grid(b=True)
     plt.legend(bbox_to_anchor=(0, 1), loc='upper left')
-    plt.figtext(0.5, 0, maxstring + ", " + minstring, fontsize=9,
-                ha="center", bbox={"facecolor": "orange", "alpha": 0.5, "pad": 5})
+
+    plt.figtext(0.5, 0.03, final_string, fontsize=9, ha="center",
+                bbox={"facecolor": "orange", "alpha": 0.5, "pad": 5})
+    plt.subplots_adjust(bottom=0.19, top=0.9)
+
     plt.show()
 
 
